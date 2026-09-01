@@ -1,0 +1,66 @@
+{
+	 "if": {
+	    "anyOf": [
+		 {
+			"not": {
+			  "anyOf": [
+                    {
+				    "field": "type",
+				    "like": "Microsoft.CognitiveServices/accounts/*"
+				    },
+                    {
+				    "field": "type",
+				    "like": "Microsoft.CognitiveServices/accounts/projects/*"
+				    },
+					{
+                    "field": "type",
+                    "like": "Microsoft.Search/searchServices"
+                    },
+					{
+                    "field": "type",
+                    "like": "Microsoft.Storage/storageAccounts"
+                    },
+                    {
+				    "field": "type",
+				    "in": ["Microsoft.CognitiveServices/accounts", 
+                    "Microsoft.CognitiveServices/accounts/projects",  
+                    "Microsoft.Search/searchServices", 
+                    "Microsoft.Storage/storageAccounts"]
+				    }
+                ]
+			}
+		 },
+		{
+          "allOf": [
+            {
+              "field": "type",
+              "equals": "Microsoft.Storage/storageAccounts"
+            },
+            {
+              "not": {
+                "field": "Microsoft.Storage/storageAccounts/sku.name",
+                "equals": "Standard_LRS"
+              }
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "field": "type",
+              "equals": "Microsoft.Search/searchServices"
+            },
+            {
+              "not": {
+                "field": "Microsoft.Search/searchServices/sku.name",
+                "in": ["basic", "free"]
+              }
+            }
+          ]
+        }          
+	]
+	},
+	"then": {
+	  "effect": "deny"
+	}
+}
