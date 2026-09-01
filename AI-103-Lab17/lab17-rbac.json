@@ -1,0 +1,25 @@
+{
+  "Name": "Spektra Custom RBAC",
+  "Id": null,
+  "IsCustom": true,
+  "Description": "Spektra Training Custom Role.",
+  "Actions": [
+    "Microsoft.CognitiveServices/accounts/*",
+    "Microsoft.Resources/deployments/*",
+    "Microsoft.Resources/subscriptions/resourceGroups/read",
+	"Microsoft.BotService/botServices/*",
+	"Microsoft.Search/searchServices/*",
+	"Microsoft.Storage/*",
+    "Microsoft.Search/searchServices/*",
+    "Microsoft.ResourceHealth/availabilityStatuses/read",
+    "Microsoft.Search/searchServices/indexes/documents/*",
+    "Microsoft.Search/searchServices/indexes/contentSecurity/elevatedOperations/read"    
+  ],
+  "NotActions": [
+    "Microsoft.Authorization/*/read",
+    "Microsoft.CognitiveServices/accounts/write",
+    "Microsoft.CognitiveServices/accounts/delete",
+    "Microsoft.CognitiveServices/accounts/projects/write",
+    "Microsoft.CognitiveServices/accounts/projects/delete"
+  ]
+}
