@@ -23,7 +23,7 @@
                                     "field": "Microsoft.CognitiveServices/accounts/deployments/model.name",
                                     "in": [
                                         "gpt-4o-mini-tts",
-                                        gpt-4o-transcribe
+                                        "gpt-4o-transcribe"
                                     ]
                                 }
                             }
@@ -84,7 +84,7 @@
                                 ]
                             }
                         ]
-                    }                    
+                    }
                 ]
             },
             "then": {
