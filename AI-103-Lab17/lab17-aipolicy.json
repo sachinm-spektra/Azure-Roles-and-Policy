@@ -23,6 +23,7 @@
                                     "field": "Microsoft.CognitiveServices/accounts/deployments/model.name",
                                     "in": [
                                         "gpt-5",
+                                        "gpt-5.2",
                                         "text-embedding-3-small"
                                     ]
                                 }
@@ -57,6 +58,34 @@
                             }
                         ]
                     },
+                    {
+                        "allOf": [
+                            {
+                                "field": "type",
+                                "equals": "Microsoft.CognitiveServices/accounts/deployments"
+                            },
+                            {
+                                "field": "Microsoft.CognitiveServices/accounts/deployments/model.name",
+                                "equals": "gpt-5.2"
+                            },
+                            {
+                                "anyOf": [
+                                    {
+                                        "not": {
+                                            "field": "Microsoft.CognitiveServices/accounts/deployments/sku.name",
+                                            "in": [
+                                                "GlobalStandard"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "field": "Microsoft.CognitiveServices/accounts/deployments/sku.capacity",
+                                        "greater": 100
+                                    }
+                                ]
+                            }
+                        ]
+                    },                    
                     {
                         "allOf": [
                             {
