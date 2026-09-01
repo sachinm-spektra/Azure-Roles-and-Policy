@@ -23,7 +23,7 @@
                                     "field": "Microsoft.CognitiveServices/accounts/deployments/model.name",
                                     "in": [
                                         "gpt-4o-mini-tts",
-                                        "gpt-4o-transcribe"
+                                        "gpt-4o-mini-transcribe"
                                     ]
                                 }
                             }
@@ -65,7 +65,7 @@
                             },
                             {
                                 "field": "Microsoft.CognitiveServices/accounts/deployments/model.name",
-                                "equals": "gpt-4o-transcribe"
+                                "equals": "gpt-4o-mini-transcribe"
                             },
                             {
                                 "anyOf": [
