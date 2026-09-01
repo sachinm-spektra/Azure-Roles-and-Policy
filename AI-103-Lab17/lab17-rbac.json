@@ -11,9 +11,7 @@
 	"Microsoft.Search/searchServices/*",
 	"Microsoft.Storage/*",
     "Microsoft.Search/searchServices/*",
-    "Microsoft.ResourceHealth/availabilityStatuses/read",
-    "Microsoft.Search/searchServices/indexes/documents/*",
-    "Microsoft.Search/searchServices/indexes/contentSecurity/elevatedOperations/read"    
+    "Microsoft.ResourceHealth/availabilityStatuses/read"  
   ],
   "NotActions": [
     "Microsoft.Authorization/*/read",
