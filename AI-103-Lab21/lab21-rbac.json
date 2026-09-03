@@ -1,0 +1,20 @@
+{
+  "Name": "Spektra Custom RBAC",
+  "Id": null,
+  "IsCustom": true,
+  "Description": "Spektra Training Custom Role. Allows Foundry resource and project management but restricts model deployment.",
+  "Actions": [
+    "Microsoft.CognitiveServices/accounts/*",
+    "Microsoft.Resources/deployments/*",
+    "Microsoft.Resources/subscriptions/resourceGroups/read"
+  ],
+  "NotActions": [
+    "Microsoft.Authorization/*/read",
+    "Microsoft.CognitiveServices/accounts/write",
+    "Microsoft.CognitiveServices/accounts/delete",
+    "Microsoft.CognitiveServices/accounts/projects/write",
+    "Microsoft.CognitiveServices/accounts/projects/delete",
+    "Microsoft.CognitiveServices/accounts/deployments/write",
+    "Microsoft.CognitiveServices/accounts/deployments/delete"
+  ]
+}
